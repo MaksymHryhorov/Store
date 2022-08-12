@@ -1,1 +1,148 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css';
+@import 'https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css';
+
+body {
+  background: white;
+}
+
+h3.h3 {
+  text-align: center;
+  margin: 1em;
+  text-transform: capitalize;
+  font-size: 1.7em;
+}
+
+.product-grid3 {
+  margin-top: 20px;
+  font-family: Roboto, sans-serif;
+  text-align: center;
+  position: relative;
+  z-index: 1
+}
+
+.product-grid3:before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  background: #fff;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all .5s ease 0s
+}
+
+.product-grid3:hover:before {
+  opacity: 1;
+  height: 100%;
+}
+
+.product-grid3 .product-image3 {
+  position: relative;
+  width: 65%;
+  margin-left: 18%
+}
+
+.product-grid3 .product-image3 a {
+  display: block
+}
+
+.product-grid3 .product-image3 img {
+  width: 100%;
+  height: auto
+}
+
+.product-grid3 .pic-1 {
+  opacity: 1;
+  transition: all .5s ease-out 0s
+}
+
+.product-grid3:hover .pic-1 {
+  opacity: 0
+}
+
+.product-grid3 .pic-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: all .5s ease-out 0s
+}
+
+.product-grid3:hover .pic-2 {
+  opacity: 1
+}
+
+.product-grid3 .social li {
+  display: inline-block
+}
+
+.product-grid3 .social li a {
+  color: #e67e22;
+  background: #fff;
+  font-size: 18px;
+  line-height: 50px;
+  width: 50px;
+  height: 50px;
+  border: 1px solid rgba(0, 0, 0, .1);
+  border-radius: 50%;
+  margin: 0 2px;
+  display: block;
+}
+
+.product-grid3 .social li a:hover {
+  background: #e67e22;
+  color: #fff
+}
+
+.product-grid3 .product-discount-label, .product-grid3 .product-new-label {
+  background-color: red;
+  color: #fff;
+  font-size: 17px;
+  padding: 0 10px;
+  position: absolute;
+  left: 85%;
+  top: 2px;
+
+}
+
+.product-grid3 .product-content {
+  z-index: -1;
+  padding: 15px;
+  text-align: center
+}
+
+.product-grid3 .title {
+  font-size: 18px;
+  text-transform: capitalize;
+  margin: 0 0 7px;
+  transition: all .3s ease 0s
+}
+
+.product-grid3 .title a {
+  color: #414141
+}
+
+.product-grid3 .price {
+  color: #000;
+  font-size: 18px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  margin-right: 2px;
+  display: inline-block
+}
+
+.product-grid3 .price span {
+  color: #909090;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0;
+  text-decoration: line-through;
+  text-align: left;
+  display: inline-block;
+  margin-top: -2px
+}
+
+

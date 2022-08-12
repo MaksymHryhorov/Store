@@ -1,8 +1,34 @@
-<div *ngFor="let product of products">
-  <div>
-    <h1>{{product.productName}}</h1>
-    <h3>{{product.price}} $</h3>
-    <img width="50%" src="{{product.imageProduct}}" alt="{{product.productName}}">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
 
+<div class="container">
+  <h3 class="h3">Products</h3>
+  <div class="row">
+    <div *ngFor="let product of products" class="col-md-3 col-sm-6">
+      <div class="product-grid3">
+        <div class="product-image3">
+          <a href="#">
+            <img class="pic-1" src="{{product.imageProduct}}">
+            <img class="pic-2" src="{{product.imageProduct}}">
+          </a>
+          <span class="product-new-label">New</span>
+        </div>
+
+        <div class="product-content">
+          <h3 class="title"><a href="#">{{product.productName}}</a></h3>
+          <div class="price">
+            ${{product.price}}
+            <span>${{product.price}}.99</span>
+          </div>
+        </div>
+
+        <div>
+          <button type="button" class="btn btn-outline-success" style="width: 75%">
+            <span class="add-cart-counter__btn-label">В корзину</span>
+          </button>
+        </div>
+
+      </div>
+
+    </div>
   </div>
 </div>
