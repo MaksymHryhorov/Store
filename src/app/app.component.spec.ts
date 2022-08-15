@@ -16,10 +16,9 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'productmanagerapp'`, () => {
+  it(`should have as title 'WmStore'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('productmanagerapp');
   });
 
   it('should render title', () => {

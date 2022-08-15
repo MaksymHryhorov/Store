@@ -1,12 +1,21 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
 
 <div class="container">
+
   <h3 class="h3">Products</h3>
+
+  <form class="form-inline my-2 my-lg-0">
+    <input type="search" (ngModelChange)="searchProducts(key.value)" #key="ngModel" ngModel
+           name="key" id="searchName" class="form-control mr-ms-2"
+           placeholder="Search product" style="text-align: center; margin: auto;">
+  </form>
+
+  <br>
   <div class="row">
     <div *ngFor="let product of products" class="col-md-3 col-sm-6">
       <div class="product-grid3">
         <div class="product-image3">
-          <a href="#">
+          <a href="/products/{{product.id}}">
             <img class="pic-1" src="{{product.imageProduct}}">
             <img class="pic-2" src="{{product.imageProduct}}">
           </a>
@@ -14,7 +23,7 @@
         </div>
 
         <div class="product-content">
-          <h3 class="title"><a href="#">{{product.productName}}</a></h3>
+          <h3 class="title"><a href="">{{product.productName}}</a></h3>
           <div class="price">
             ${{product.price}}
             <span>${{product.price}}.99</span>
