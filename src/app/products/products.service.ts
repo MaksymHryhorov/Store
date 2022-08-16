@@ -25,12 +25,12 @@ export class ProductsService {
     return this.http.delete(this.baseUrl + "/products/" + id);
   }
 
-  updateProduct(student: Product) {
-    return this.http.put(this.baseUrl + "/products", student);
+  updateProduct(product: Product) {
+    return this.http.put(this.baseUrl + "/products", product);
   }
 
-  createProduct(student: Product) {
-    return this.http.post(this.baseUrl + "/products", student);
+  createProduct(product: Product) {
+    return this.http.post(this.baseUrl + "/products", product);
   }
 
 }

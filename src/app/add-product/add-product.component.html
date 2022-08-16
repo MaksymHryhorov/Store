@@ -1,0 +1,41 @@
+<div class="container-fluid">
+
+  <div class="card">
+    <div class="card-header">
+      Add New Product
+    </div>
+    <div class="card-body">
+
+      <div class="form-group">
+        <label for="productName">Product Name</label>
+        <input [(ngModel)]="product.productName" id="productName" class="form-control" type="text" name="">
+      </div>
+
+      <div class="form-group">
+        <label for="country">Country</label>
+        <input [(ngModel)]="product.country" id="country" class="form-control" type="text" name="">
+      </div>
+
+      <div class="form-group">
+        <label for="price">Price</label>
+        <input [(ngModel)]="product.price" id="price" class="form-control" type="text" name="">
+      </div>
+
+      <div class="form-group">
+        <label for="imageProduct">Image</label>
+        <input [(ngModel)]="product.imageProduct" id="imageProduct" class="form-control" type="text" name="">
+      </div>
+
+      <button class="btn btn-primary" (click)="saveProduct()">Save Product</button>
+    </div>
+    <div class="card-footer" *ngIf="showAlert">
+      <div class="alert alert-success" role="alert">
+        <button class="close" (click)="closeAlert()">&times;</button>
+        <strong>Successfully Saved</strong>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
