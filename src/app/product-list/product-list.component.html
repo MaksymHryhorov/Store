@@ -1,0 +1,41 @@
+<div class="container">
+
+  <h3 class="h3">Products</h3>
+
+  <form class="form-inline my-2 my-lg-0">
+    <input type="search" (ngModelChange)="searchProducts(key.value)" #key="ngModel" ngModel
+           name="key" id="searchName" class="form-control mr-ms-2"
+           placeholder="Search product" style="text-align: center; margin: auto;">
+  </form>
+
+  <br>
+  <div class="row">
+    <div *ngFor="let product of products" class="col-md-3 col-sm-6">
+      <div class="product-grid3">
+        <div class="product-image3">
+          <a [routerLink]="['/edit-product', product.id]" routerLinkActive="$router_link-active$">
+            <img class="pic-1" src="{{product.imageProduct}}">
+            <img class="pic-2" src="{{product.imageProduct}}">
+          </a>
+          <span class="product-new-label">New</span>
+        </div>
+
+        <div class="product-content">
+          <h3 class="title"><a href="">{{product.productName}}</a></h3>
+          <div class="price">
+            ${{product.price}}
+            <span>${{product.price}}.99</span>
+          </div>
+        </div>
+
+        <div>
+          <button type="button" class="btn btn-outline-success" style="width: 75%">
+            <span class="add-cart-counter__btn-label">В корзину</span>
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>

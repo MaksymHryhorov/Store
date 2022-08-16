@@ -1,43 +1,20 @@
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
 
-<div class="container">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
 
-  <h3 class="h3">Products</h3>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/product-list']" routerLinkActive="$router_link-active$">Product List</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Add Product</a>
+      </li>
 
-  <form class="form-inline my-2 my-lg-0">
-    <input type="search" (ngModelChange)="searchProducts(key.value)" #key="ngModel" ngModel
-           name="key" id="searchName" class="form-control mr-ms-2"
-           placeholder="Search product" style="text-align: center; margin: auto;">
-  </form>
+    </ul>
 
-  <br>
-  <div class="row">
-    <div *ngFor="let product of products" class="col-md-3 col-sm-6">
-      <div class="product-grid3">
-        <div class="product-image3">
-          <a href="/products/{{product.id}}">
-            <img class="pic-1" src="{{product.imageProduct}}">
-            <img class="pic-2" src="{{product.imageProduct}}">
-          </a>
-          <span class="product-new-label">New</span>
-        </div>
-
-        <div class="product-content">
-          <h3 class="title"><a href="">{{product.productName}}</a></h3>
-          <div class="price">
-            ${{product.price}}
-            <span>${{product.price}}.99</span>
-          </div>
-        </div>
-
-        <div>
-          <button type="button" class="btn btn-outline-success" style="width: 75%">
-            <span class="add-cart-counter__btn-label">В корзину</span>
-          </button>
-        </div>
-
-      </div>
-
-    </div>
   </div>
-</div>
+</nav>
+<router-outlet></router-outlet>
