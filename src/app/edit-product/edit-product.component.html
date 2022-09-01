@@ -1,50 +1,54 @@
-<div class="container-fluid">
-
-  <div class="card">
-    <div class="card-header">
-      Update Product
-    </div>
-    <div class="card-body">
-
-      <div class="form-group">
-        <label for="productName">Product Name</label>
-        <input [(ngModel)]="product.productName" id="productName" class="form-control" type="text" name="productName">
+<div class="container">
+  <section class="product_product__content__1oBwX ">
+    <div class="product-images_images__1ih_f">
+      <div class="product-images_images_main__3ijcr">
+        <figure class="product-images_images_main_inner__pKPg3">
+          <img class="pic-1" src="{{product.imageProduct}}">
+        </figure>
       </div>
-
-      <div class="form-group">
-        <label for="country">Country</label>
-        <input [(ngModel)]="product.country" id="country" class="form-control" type="text" name="country">
-      </div>
-
-      <div class="form-group">
-        <label for="price">Price</label>
-        <input [(ngModel)]="product.price" id="price" class="form-control" type="text" name="price">
-      </div>
-
-      <div class="form-group">
-        <label for="imageProduct"></label>
-        <img class="pic-1" src="{{product.imageProduct}}">
-        <input [(ngModel)]="product.imageProduct" id="imageProduct" class="form-control" type="text" name="imageProduct">
-      </div>
-
-      <button class="btn btn-primary" (click)="updateStudent()">Update Product</button>
-
-      <button class="btn btn-danger" (click)="deleteProduct(product.id); redirect()">Delete Product</button>
 
     </div>
+    <div class="product_product__features__laJ1i">
 
-    <div class="card-footer" *ngIf="showAlert">
-      <div class="alert alert-success">
-        <button (click)="closeAlert()" class="close">
-          &times;
-        </button>
-        <strong>Success</strong>
+      <div class="product_product__flex_block__1aOW-">
+        <h3>{{product.productName}}</h3>
+        <div class="product_product__status__20nkK">Є в наявності</div>
+
+        <div class="counter_counter__1zQ0l">
+
+          <button type="button" class="counter_counter_button__2ekdX">-</button>
+          <input type="text" class="counter_counter_value__9qibd" data-hj-whitelist="" value="1">
+          <button type="button" class="counter_counter_button__2ekdX">+</button>
+
+        </div>
+
+        <div class="product_product__price__3NmA_">
+
+          <div class="productDetails_price_actual__12u8E">
+            <span data-hj-whitelist="">{{product.price}}&nbsp;грн</span>
+          </div>
+
+        </div>
+
+        <div class="productPageBuy_buy_section__21qfU">
+
+          <button
+            class="PrimaryButton_primaryButton__3eQ1J PrimaryButton_lg__1wrj4 PrimaryButton_red__28TdX productPageBuy_buy_btn__31F38"
+            title="Додати до кошика" type="button">
+            <span>Купити</span>
+          </button>
+          <br>
+
+          <button class="btn btn-primary" [routerLink]="['/update-product', product.id]">Update Page</button>
+          <button class="btn btn-danger" (click)="deleteProduct(product.id); redirect()">Delete Product</button>
+
+        </div>
+
+
       </div>
+
     </div>
 
 
-
-  </div>
-
+  </section>
 </div>
-

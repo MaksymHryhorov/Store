@@ -1,0 +1,46 @@
+<div class="container-fluid">
+
+  <div class="card">
+    <div class="card-header">
+      Add New Product
+    </div>
+    <div class="card-body">
+
+      <div class="form-group">
+        <label for="productName">Product Name</label>
+        <input [(ngModel)]="product.productName" id="productName" class="form-control" type="text" name="">
+      </div>
+
+      <div class="form-group">
+        <label for="country">Country</label>
+        <input [(ngModel)]="product.country" id="country" class="form-control" type="text" name="">
+      </div>
+
+      <div class="form-group">
+        <label for="price">Price</label>
+        <input [(ngModel)]="product.price" id="price" class="form-control" type="text" name="">
+      </div>
+
+      <div class="form-group">
+        <label for="imageProduct">Image</label>
+        <input [(ngModel)]="product.imageProduct" id="imageProduct" class="form-control" type="text" name="">
+      </div>
+
+      <button class="btn btn-primary" [routerLink]="['/update-product', product.id]" (click)="updateStudent(); redirect()">Update
+        Product
+      </button>
+    </div>
+
+  </div>
+
+  <div class="card-footer" *ngIf="showAlert">
+    <div class="alert alert-success">
+      <button (click)="closeAlert()" class="close">
+        &times;
+      </button>
+      <strong>Success</strong>
+    </div>
+  </div>
+
+</div>
+
